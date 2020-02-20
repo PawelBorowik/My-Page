@@ -21,51 +21,26 @@ p{
 }
 .nav{
   position: absolute;
+  left:-90%;
+   top:0;
+   bottom:0;
+   right: 100%;
+   
+   background-color: white;
+  }
+  .hide{
+    transition: all 2s ease;
+  }
+
+  .show{
+   left:0;
+   top:0;
+ bottom:0;
+ right:10%;
+ transition: all 2s ease;
+  
   
  
-  background-color: white;
-  
-  
- }
-
- .navShow{
-  top:0;
-  bottom:0;
-  left: 0;
-  right: 10%;
-  animation-name: show;
-  animation-duration: 1s;
 
  }
-.navHide{
-  top:0;
-  bottom:0;
-  left: 0;
-
-right: 100%;
-animation-name: hide;
-  animation-duration: 1s
-  
-}
-@keyframes hide{
-  0%{
-    right: 10%;
-
-  }
-  100%{
-    right: 100%;
-
-  }
-}
-@keyframes show{
-  0%{
-    right: 100%;
-
-  }
-  100%{
-    right: 10%;
-
-  }
-}
-
 

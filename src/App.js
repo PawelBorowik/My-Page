@@ -5,10 +5,11 @@ import { useState } from 'react';
 
 function App() {
 
-  const [x, setX] = useState(false)
+  const [x, setX] = useState()
 
   const handleClick = () => {
     setX(!x)
+
 
   }
   return (
@@ -16,7 +17,7 @@ function App() {
       <p>console.log("welcome word")</p>
 
       <div className="x" onClick={() => handleClick()}>{x ? "X" : "T"}</div>
-      <div className={`nav ${x ? "navShow" : "navHide"}`}>
+      <div className={`nav ${!x ? "hide" : "show"}`}>
 
       </div>
     </div>
