@@ -1,0 +1,71 @@
+.App {
+position: relative;
+width: 100%;
+ max-height: 100vh;
+  background-color: #222;
+}
+p{
+  color: antiquewhite;
+  text-align: center;
+  line-height: 100vh;
+}
+
+
+
+.x{
+  position: fixed;
+  right: 20px;
+  top:10px;
+  font-size: 50px;
+  color: beige;
+}
+.nav{
+  position: absolute;
+  
+ 
+  background-color: white;
+  
+  
+ }
+
+ .navShow{
+  top:0;
+  bottom:0;
+  left: 0;
+  right: 10%;
+  animation-name: show;
+  animation-duration: 1s;
+
+ }
+.navHide{
+  top:0;
+  bottom:0;
+  left: 0;
+
+right: 100%;
+animation-name: hide;
+  animation-duration: 1s
+  
+}
+@keyframes hide{
+  0%{
+    right: 10%;
+
+  }
+  100%{
+    right: 100%;
+
+  }
+}
+@keyframes show{
+  0%{
+    right: 100%;
+
+  }
+  100%{
+    right: 10%;
+
+  }
+}
+
+
