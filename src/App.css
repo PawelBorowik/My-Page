@@ -15,17 +15,19 @@ width: 100%;
   top:10px;
   /* font-size: 50px; */
   color: beige;
+  z-index:1;
 }
 
 .nav{
   position: absolute;
   left:0;
    top:100%;
-   bottom:-75%;
+   bottom:-100%;
    right: 0;
-   background-color:gray;
+   background-color: #222;
    color: white;
    border: 2px solid;
+  
   }
   .hide{
     transition: all 1s ease;
@@ -33,7 +35,7 @@ width: 100%;
 
   .show{
    left:0;
-   top:25%;
+   top:0;
  bottom:0;
  right:0;
  transition: all 1s ease;
@@ -43,12 +45,26 @@ width: 100%;
    text-align: center;
    line-height: 100vh;
  }
+ ul{
+   margin-top: 100px;
+ }
  li{
    text-align: center;
    list-style-type: none;
+   margin: 30px 70px;
+   height: 50px;
   
  }
  a{
+   display: block;
+   font-size: 30px;
    text-decoration: none;
+   color: white;
+
  }
+ a:hover {
+  opacity: 0.7; 
+  border-bottom: 2px solid;
+}
+ 
 
