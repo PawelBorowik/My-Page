@@ -13,14 +13,25 @@ function App() {
 
   }
   return (
+
     <div className="App">
       <p>console.log("welcome word")</p>
-
-      <div className="x" onClick={() => handleClick()}>{x ? "X" : "T"}</div>
-      <div className={`nav ${!x ? "hide" : "show"}`}>
-
+      <div className="x">
+        <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${x ? "is-active" : ""}`} type="button">
+          <span className="hamburger-box">
+            <span className="hamburger-inner"></span>
+          </span>
+        </button>
       </div>
-    </div>
+      < div className={`nav ${!x ? "hide" : "show"}`
+      }>
+        <ul>
+          <li onClick={() => handleClick()} >Michał</li>
+          <li onClick={() => handleClick()} >Kamila</li>
+
+        </ul>
+      </div >
+    </div >
   );
 }
 
