@@ -1,4 +1,15 @@
-import React from 'react';
+
+
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Home from "./Home"
+import Users from "./Users"
+import About from "./About"
 
 import './App.css';
 import { useState } from 'react';
@@ -15,7 +26,7 @@ function App() {
   return (
 
     <div className="App">
-      <p>console.log("welcome word")</p>
+
       <div className="x">
         <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${x ? "is-active" : ""}`} type="button">
           <span className="hamburger-box">
@@ -23,14 +34,40 @@ function App() {
           </span>
         </button>
       </div>
-      < div className={`nav ${!x ? "hide" : "show"}`
-      }>
-        <ul>
-          <li onClick={() => handleClick()} >Michał</li>
-          <li onClick={() => handleClick()} >Kamila</li>
 
-        </ul>
-      </div >
+      <Router>
+        < div className={`nav ${!x ? "hide" : "show"}`}>
+          <nav>
+            <ul>
+              <li onClick={() => handleClick()}>
+                <Link to="/">Home</Link>
+              </li>
+              <li onClick={() => handleClick()}>
+                <Link to="/about">About</Link>
+              </li >
+              <li onClick={() => handleClick()}>
+                <Link to="/users">Users</Link>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+
+      </Router>
+
     </div >
   );
 }
