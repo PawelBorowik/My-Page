@@ -10,7 +10,7 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
-
+import './hamburger.css'
 import './App.css';
 import { useState } from 'react';
 
@@ -40,13 +40,13 @@ function App() {
           <nav>
             <ul>
               <li onClick={() => handleClick()}>
-                <Link to="/">Home</Link>
+                <Link to="/">Start</Link>
               </li>
               <li onClick={() => handleClick()}>
-                <Link to="/about">About</Link>
+                <Link to="/about">O mnie</Link>
               </li >
               <li onClick={() => handleClick()}>
-                <Link to="/users">Users</Link>
+                <Link to="/users">Projekty</Link>
               </li>
             </ul>
           </nav>
