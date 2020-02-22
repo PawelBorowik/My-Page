@@ -13,6 +13,8 @@ import About from "./About"
 import './hamburger.css'
 import './App.css';
 import { useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
@@ -20,7 +22,6 @@ function App() {
 
   const handleClick = () => {
     setX(!x)
-
 
   }
   return (
@@ -40,13 +41,13 @@ function App() {
           <nav>
             <ul>
               <li onClick={() => handleClick()}>
-                <Link to="/">Start</Link>
+                <Link to="/"><FontAwesomeIcon icon={faHome} /></Link>
               </li>
               <li onClick={() => handleClick()}>
-                <Link to="/about">O mnie</Link>
+                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /></Link>
               </li >
               <li onClick={() => handleClick()}>
-                <Link to="/users">Projekty</Link>
+                <Link to="/users"><FontAwesomeIcon icon={faTools} /></Link>
               </li>
             </ul>
           </nav>
