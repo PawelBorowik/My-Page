@@ -1,7 +1,13 @@
 import React from 'react';
+import Canvans from "./canvans"
 
 
 function Home() {
-    return <h2>console.log("welcome word")</h2>;
+    return (
+        <>
+            <Canvans />
+
+        </>
+    )
 }
 export default Home;

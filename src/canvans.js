@@ -17,7 +17,7 @@ class Canvans extends React.Component {
         if (this.vantaEffect) this.vantaEffect.destroy()
     }
     render() {
-        return <div id="awa" style={{ backgroundColor: "#000" }} ref={this.vantaRef}>
+        return <div id="awa" ref={this.vantaRef}>
             <span className="text">console.log(Welcome World!)</span>
         </div>
     }

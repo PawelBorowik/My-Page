@@ -10,7 +10,7 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
-import Canvans from "./canvans"
+
 import './hamburger.css'
 import './App.css';
 import { useState } from 'react';
@@ -28,7 +28,7 @@ function App() {
   return (
 
     <div className="App">
-      <Canvans />
+
 
       <div className="x">
         <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${x ? "is-active" : ""}`} type="button">
