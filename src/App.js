@@ -10,6 +10,7 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
+import Canvans from "./canvans"
 import './hamburger.css'
 import './App.css';
 import { useState } from 'react';
@@ -19,26 +20,15 @@ import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
 function App() {
 
   const [x, setX] = useState()
-
-
-
   const handleClick = () => {
     setX(!x)
 
   }
 
-
-
-
-
-
-
-  // const changeIconToText = mouseMove ? "start" : <FontAwesomeIcon icon={faHome} />
-
-
   return (
 
     <div className="App">
+      <Canvans />
 
       <div className="x">
         <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${x ? "is-active" : ""}`} type="button">

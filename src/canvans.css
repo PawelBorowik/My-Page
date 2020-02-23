@@ -1,0 +1,14 @@
+#awa{
+   
+    height: 100vh;
+}
+
+
+.text{
+    position:absolute !important;
+    bottom:30%;
+    left:20%;
+    color:white;
+    font-size: 45px;
+
+}
