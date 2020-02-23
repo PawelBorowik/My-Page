@@ -20,10 +20,22 @@ function App() {
 
   const [x, setX] = useState()
 
+
+
   const handleClick = () => {
     setX(!x)
 
   }
+
+
+
+
+
+
+
+  // const changeIconToText = mouseMove ? "start" : <FontAwesomeIcon icon={faHome} />
+
+
   return (
 
     <div className="App">
@@ -41,13 +53,13 @@ function App() {
           <nav>
             <ul>
               <li onClick={() => handleClick()}>
-                <Link to="/"><FontAwesomeIcon icon={faHome} /></Link>
+                <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="Start">Start</span></Link>
               </li>
-              <li onClick={() => handleClick()}>
-                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /></Link>
+              <li className="bbb" onClick={() => handleClick()}>
+                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="Start">O mnie</span></Link>
               </li >
-              <li onClick={() => handleClick()}>
-                <Link to="/users"><FontAwesomeIcon icon={faTools} /></Link>
+              <li className="ccc" onClick={() => handleClick()}>
+                <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="Start">Umiejętności</span></Link>
               </li>
             </ul>
           </nav>
