@@ -1,6 +1,6 @@
 import React from 'react'
 import BIRDS from 'vanta/dist/vanta.birds.min'
-import './canvans.css';
+import './style/canvans.css';
 
 
 class Canvans extends React.Component {

@@ -10,18 +10,17 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
-
-import './hamburger.css'
-import './App.css';
+import './style/hamburger.css'
+import './style/App.scss'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
-  const [x, setX] = useState()
+  const [burgerMenu, setBurgerMenu] = useState()
   const handleClick = () => {
-    setX(!x)
+    setBurgerMenu(!burgerMenu)
 
   }
 
@@ -30,8 +29,8 @@ function App() {
     <div className="App">
 
 
-      <div className="x">
-        <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${x ? "is-active" : ""}`} type="button">
+      <div className="bar">
+        <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${burgerMenu ? "is-active" : ""}`} type="button">
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
           </span>
@@ -39,17 +38,17 @@ function App() {
       </div>
 
       <Router>
-        < div className={`nav ${!x ? "hide" : "show"}`}>
+        < div className={`nav ${!burgerMenu ? "nav_hide" : "nav_show"}`}>
           <nav>
-            <ul>
-              <li onClick={() => handleClick()}>
-                <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="Start">Start</span></Link>
+            <ul className="nav_ul">
+              <li className="nav_li" onClick={() => handleClick()}>
+                <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></Link>
               </li>
-              <li className="bbb" onClick={() => handleClick()}>
-                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="Start">O mnie</span></Link>
+              <li className="nav_li" onClick={() => handleClick()}>
+                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></Link>
               </li >
-              <li className="ccc" onClick={() => handleClick()}>
-                <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="Start">Umiejętności</span></Link>
+              <li className="nav_li" onClick={() => handleClick()}>
+                <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="nav_start">Umiejętności</span></Link>
               </li>
             </ul>
           </nav>
