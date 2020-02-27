@@ -13,11 +13,18 @@ class HelloWorld extends Component {
 
             <p className="typing">console.log("<Typical
                 wrapper="p"
-                loop={Infinity}
+                loop={1}
                 steps={
                     ["Hello world!", 2000,
-                        "Welcome", 1500,
-                        "on my page!", 2000
+                        "", 1000,
+                        "I,m", 500,
+
+                        "I`m", 1500,
+                        "", 1000,
+                        "Junior", 2000,
+                        "", 1000,
+                        "front end dev", 2000,
+                        "", 1000,
                     ]
 
                 }

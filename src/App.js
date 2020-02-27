@@ -41,13 +41,13 @@ function App() {
         < div className={`nav ${!burgerMenu ? "nav_hide" : "nav_show"}`}>
           <nav>
             <ul className="nav_ul">
-              <li className="nav_li" onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
                 <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></Link>
               </li>
-              <li className="nav_li" onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
                 <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></Link>
               </li >
-              <li className="nav_li" onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
                 <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="nav_start">Umiejętności</span></Link>
               </li>
             </ul>
