@@ -15,9 +15,9 @@ class HelloWorld extends Component {
                 wrapper="p"
                 loop={Infinity}
                 steps={
-                    ["Hello world!", 1000,
-                        "Welcome", 1000,
-                        "on my page!", 1000
+                    ["Hello world!", 2000,
+                        "Welcome", 1500,
+                        "on my page!", 2000
                     ]
 
                 }
