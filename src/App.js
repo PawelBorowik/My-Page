@@ -10,8 +10,8 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
-import './style/hamburger.css'
-import './style/App.scss'
+// import './style/hamburger.css'
+// import './style/App.scss'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'

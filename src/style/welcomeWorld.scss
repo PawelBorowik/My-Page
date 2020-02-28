@@ -1,9 +1,15 @@
-p{
-    color: #13b3d7;
+
+.typing{
+    color: $main-color;
     font-size: 22px;
     display: inline-block;
     background-color: #DEE2E8;
-    
+    @include xxx (md){
+        font-size: 50px;
+    }
+   
 }
+
+
 
 

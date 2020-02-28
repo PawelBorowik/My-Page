@@ -1,7 +1,7 @@
 
 import React, { Component } from 'react'
 import Typical from 'react-typical'
-import './style/welcomeWorld.scss'
+// import './style/welcomeWorld.scss'
 
 
 
@@ -12,7 +12,7 @@ class HelloWorld extends Component {
         return (
 
             <p className="typing">console.log("<Typical
-                wrapper="p"
+                wrapper="span"
                 loop={1}
                 steps={
                     ["Hello world!", 2000,

@@ -3,16 +3,20 @@ $font-family: 'Segoe UI', 'Roboto', 'Oxygen',
 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
 sans-serif;
 $max-width:1000px;
+$main-color: #13b3d7;
 
-$brekapoints:(
-    xs: ( min-width:460px)
-    sm: ( min-width:800px)
-    md: ( min-width:1200px)
+
+$breakpoints:(
+    xs: ( min-width:460px),
+    sm: ( min-width:800px),
+    md: ( min-width:1200px),
 );
 
-@mixin media($brekapoints){
-    $size: map-get($brekapoints,$brekapoint);
-    @if#{$size}{
-        @content
+@mixin  xxx ($breakpoint){
+    $size: map-get($breakpoints,$breakpoint);
+    @if($size) {
+        @media #{$size}{
+        @content;
+        }
     }
 }

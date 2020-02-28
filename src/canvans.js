@@ -1,7 +1,7 @@
 import React from 'react'
 import BIRDS from 'vanta/dist/vanta.birds.min'
 import Text from './WelcomeWorld'
-import './style/canvans.css';
+import './style/canvans.scss';
 
 
 class Canvans extends React.Component {
