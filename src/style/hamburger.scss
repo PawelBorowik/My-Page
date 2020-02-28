@@ -26,7 +26,12 @@
     .hamburger.is-active .hamburger-inner,
     .hamburger.is-active .hamburger-inner::before,
     .hamburger.is-active .hamburger-inner::after {
-      background-color: #eee; }
+      background-color: #eee; 
+      @include xxx (sm){
+        background-color: $main-color;
+        
+        
+    }}
   
   .hamburger-box {
     width: 40px;

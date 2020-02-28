@@ -10,8 +10,6 @@ import {
 import Home from "./Home"
 import Users from "./Users"
 import About from "./About"
-// import './style/hamburger.css'
-// import './style/App.scss'
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
@@ -19,9 +17,8 @@ import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
 function App() {
 
   const [burgerMenu, setBurgerMenu] = useState()
-  const handleClick = () => {
+  const handleClickBurger = () => {
     setBurgerMenu(!burgerMenu)
-
   }
 
   return (
@@ -30,7 +27,7 @@ function App() {
 
 
       <div className="bar">
-        <button onClick={() => handleClick()} className={`hamburger hamburger--emphatic ${burgerMenu ? "is-active" : ""}`} type="button">
+        <button onClick={() => handleClickBurger()} className={`hamburger hamburger--emphatic ${burgerMenu ? "is-active" : ""}`} type="button">
           <span className="hamburger-box">
             <span className="hamburger-inner"></span>
           </span>
@@ -41,13 +38,13 @@ function App() {
         < div className={`nav ${!burgerMenu ? "nav_hide" : "nav_show"}`}>
           <nav>
             <ul className="nav_ul">
-              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
                 <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></Link>
               </li>
-              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
                 <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></Link>
               </li >
-              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClick()}>
+              <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
                 <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="nav_start">Umiejętności</span></Link>
               </li>
             </ul>
