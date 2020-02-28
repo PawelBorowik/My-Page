@@ -18,14 +18,8 @@ class Canvans extends React.Component {
             minWidth: 200.00,
             scale: 1.00,
             scaleMobile: 1.00,
-            backgroundColor: 0x201e0e,
-            color1: 0xedf2ec,
-            color2: 0xe81956,
-            birdSize: 1.20,
-            wingSpan: 21.00,
-            separation: 27.00,
-            alignment: 42.00,
-            cohesion: 28.00
+            backgroundColor: 0xdee2e8,
+            color1: 0x40d0f
 
         })
     }

@@ -18,13 +18,12 @@ class HelloWorld extends Component {
                     ["Hello world!", 2000,
                         "", 1000,
                         "I,m", 500,
-
                         "I`m", 1500,
                         "", 1000,
                         "Junior", 2000,
                         "", 1000,
-                        "front end dev", 2000,
-                        "", 1000,
+                        "Frontend Dev", 2000,
+
                     ]
 
                 }
