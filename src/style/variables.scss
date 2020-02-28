@@ -1,0 +1,18 @@
+$base-font-size:16px;
+$font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+sans-serif;
+$max-width:1000px;
+
+$brekapoints:(
+    xs: ( min-width:460px)
+    sm: ( min-width:800px)
+    md: ( min-width:1200px)
+);
+
+@mixin media($brekapoints){
+    $size: map-get($brekapoints,$brekapoint);
+    @if#{$size}{
+        @content
+    }
+}
