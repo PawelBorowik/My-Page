@@ -6,7 +6,7 @@ import {
   Switch,
   Route,
   NavLink,
-  Link
+  // Link
 } from "react-router-dom";
 import Home from "./Home"
 import Users from "./Users"
@@ -40,16 +40,16 @@ function App() {
           <nav>
             <ul className="nav_ul">
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <NavLink to="/"> <FontAwesomeIcon icon={faHome} /></NavLink>
+                <NavLink to="/" exact><FontAwesomeIcon icon={faHome} /> Start</NavLink>
               </li>
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <NavLink to="/about"><FontAwesomeIcon icon={faUserAlt} /></NavLink>
+                <NavLink to="/about"><FontAwesomeIcon icon={faUserAlt} /> O mnie</NavLink>
               </li >
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <NavLink to="/users"><FontAwesomeIcon icon={faTools} /></NavLink>
+                <NavLink to="/users"><FontAwesomeIcon icon={faTools} /> Projekty</NavLink>
               </li>
               <li className="nav_desktop">
-                <NavLink to="/home"><FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></NavLink>
+                <NavLink to="/" exact><FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></NavLink>
               </li>
               <li className="nav_desktop">
                 <NavLink to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></NavLink>
@@ -62,18 +62,17 @@ function App() {
           <footer className="footer"></footer>
         </div>
 
-        {/* A <Switch> looks through its children <Route>s and
-            renders the first one that matches the current URL. */}
         <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
           <Route path="/about">
             <About />
           </Route>
           <Route path="/users">
             <Users />
           </Route>
-          <Route path="/">
-            <Home />
-          </Route>
+
         </Switch>
 
       </Router>
