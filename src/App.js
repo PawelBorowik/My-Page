@@ -5,6 +5,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
+  NavLink,
   Link
 } from "react-router-dom";
 import Home from "./Home"
@@ -39,16 +40,26 @@ function App() {
           <nav>
             <ul className="nav_ul">
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <Link to="/"> <FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></Link>
+                <NavLink to="/"> <FontAwesomeIcon icon={faHome} /></NavLink>
               </li>
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <Link to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></Link>
+                <NavLink to="/about"><FontAwesomeIcon icon={faUserAlt} /></NavLink>
               </li >
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
-                <Link to="/users"><FontAwesomeIcon icon={faTools} /><span className="nav_start">Umiejętności</span></Link>
+                <NavLink to="/users"><FontAwesomeIcon icon={faTools} /></NavLink>
+              </li>
+              <li className="nav_desktop">
+                <NavLink to="/home"><FontAwesomeIcon icon={faHome} /><span className="nav_start">Start</span></NavLink>
+              </li>
+              <li className="nav_desktop">
+                <NavLink to="/about"><FontAwesomeIcon icon={faUserAlt} /><span className="nav_start">O mnie</span></NavLink>
+              </li>
+              <li className="nav_desktop">
+                <NavLink to="/users"><FontAwesomeIcon icon={faTools} /><span className="nav_start">Umiejętności</span></NavLink>
               </li>
             </ul>
           </nav>
+          <footer className="footer"></footer>
         </div>
 
         {/* A <Switch> looks through its children <Route>s and
