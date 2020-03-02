@@ -13,7 +13,7 @@ import Users from "./Users"
 import About from "./About"
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUserAlt, faTools, faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
@@ -21,7 +21,10 @@ function App() {
   const handleClickBurger = () => {
     setBurgerMenu(!burgerMenu)
   }
-
+  const [footerArrow, setFooterArrow] = useState()
+  const handleFooterArrow = () => {
+    setFooterArrow(!footerArrow)
+  }
   return (
 
     <div className="App">
@@ -36,7 +39,7 @@ function App() {
       </div>
 
       <Router>
-        < div className={`nav ${!burgerMenu ? "nav_hide" : "nav_show"}`}>
+        < div className={`nav ${!burgerMenu ? "" : "nav_show"}`}>
           <nav>
             <ul className="nav_ul">
               <li className={`nav_li ${burgerMenu ? "aaa" : ""}`} onClick={() => handleClickBurger()}>
@@ -59,7 +62,7 @@ function App() {
               </li>
             </ul>
           </nav>
-          <footer className="footer"></footer>
+
         </div>
 
         <Switch>
@@ -75,6 +78,12 @@ function App() {
 
         </Switch>
 
+        <footer className={`footer ${!footerArrow ? "footer_hide" : "footer_show"}`}>
+          <div className={`footer_arrow ${!footerArrow ? "arrow--rotate" : ""}`} onClick={() => handleFooterArrow()}>
+            <FontAwesomeIcon icon={faArrowAltCircleUp} />
+          </div>
+          <div className="footer_content">footer</div>
+        </footer>
       </Router>
 
     </div >
