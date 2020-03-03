@@ -8,32 +8,20 @@ width: 100%;
 
 .footer{
   position: absolute;
-  left:0;
-  right:0;
+  display:block;
   text-align: center;
   font-size: 30px;
   color :white;
   bottom:-100px;
   z-index:1;
-   &_arrow{
-  color:#13b3d7;
-  font-size:  40px;
-  width: 10vw;
-  height: 10vw;
-  margin: 20px;
-  transition:  1s ease;
- 
-}
+
   &_content{
   background-color:#13b3d7;
   height: 100px;
-  
   }
+  
 }
-.arrow--rotate{
- 
-  transform: rotate(180deg);
-}
+
 .footer_show{
   left:0;
   right:0;
@@ -45,6 +33,123 @@ width: 100%;
   right:0;
   transition: 1s ease;
 }
+//ikona strzalki footera
+.footer_arrow{
+  // background-color: blue;
+  height: 30px;
+  width: 65px;
+  display:block;
+  padding: 0.5em;
+  margin: 10px auto;
+  position: relative;
+  cursor: pointer;
+  border-radius: 4px;
+  @include xxx (sm){
+    display:none;    
+ }
+}
 
+.footer_left-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0;
+  left:0;
+  width: 40px;
+  height: 7px;
+  display: block;
+  transform: rotate(35deg);
+  float: right;
+  border-radius: 2px;
+  &:after {
+    content:"";
+    background-color:$main-color;
+    width: 40px;
+    height: 7px;
+    display: block;
+    float: right;
+    border-radius: 6px 10px 10px 6px;
+    transition: all $duration $easing;
+    z-index: -1;
+  }
+}
+
+.footer_right-bar {
+  position: absolute;
+  background-color: transparent;
+  top: 0px;
+  left:26px;
+  width: 40px;
+  height: 7px;
+  display: block;
+  transform: rotate(-35deg);
+  float: right;
+  border-radius: 2px;
+  &:after {
+    content:"";
+    background-color: $main-color;
+    width: 40px;
+    height: 7px;
+    display: block;
+    float: right;
+    border-radius: 10px 6px 6px 10px;
+    transition: all $duration $easing;
+    z-index: -1;
+  }
+}
+
+.open--footer {
+    .footer_left-bar:after {
+    transform-origin: center center;
+    transform: rotate(-70deg);
+  }
+  .footer_right-bar:after {
+    transform-origin: center center;
+    transform: rotate(70deg);
+  }
+
+}
+
+//footer desktop
+.footer_desktop{
+  display:none;
+  position: fixed;
+  left:20%;
+  right: 20%;
+  bottom:-100%;
+  height: 100px; 
+  background-color:$main-color;
+  border-radius: 30px 30px 0 0;
+    @include xxx (sm){
+      display:block;     
+   }
+
+}
+.footer--show{
+  bottom:0;
+  transition: all 1s ease;
+
+}
+.footer--hide{
+  
+  transition: all 1s ease;
+
+}
+
+
+
+  
+   
+   
+  
+  
+   
+   
+   
+   
+   
+  
+   
+  
+  
  
 

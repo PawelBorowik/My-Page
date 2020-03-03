@@ -1,5 +1,4 @@
 
-
 import React from "react";
 import {
   BrowserRouter as Router,
@@ -13,7 +12,7 @@ import Users from "./Users"
 import About from "./About"
 import { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faHome, faUserAlt, faTools, faArrowAltCircleUp } from '@fortawesome/free-solid-svg-icons'
+import { faHome, faUserAlt, faTools } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
 
@@ -79,10 +78,13 @@ function App() {
         </Switch>
 
         <footer className={`footer ${!footerArrow ? "footer_hide" : "footer_show"}`}>
-          <div className={`footer_arrow ${!footerArrow ? "arrow--rotate" : ""}`} onClick={() => handleFooterArrow()}>
-            <FontAwesomeIcon icon={faArrowAltCircleUp} />
+          <div className={`footer_arrow ${!footerArrow ? "open--footer" : ""}`} onClick={() => handleFooterArrow()}>
+            <div></div>
+            <span className="footer_left-bar"></span>
+            <span className="footer_right-bar"></span>
           </div>
           <div className="footer_content">footer</div>
+          <div className={`footer_desktop ${!burgerMenu ? "footer--hide" : "footer--show"}`} onClick={() => handleClickBurger()}>footer</div>
         </footer>
       </Router>
 
